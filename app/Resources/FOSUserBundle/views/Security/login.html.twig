@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+
+    <div class="container">
+        <h3>Logowanie</h3>
+        {{ include('@FOSUser/Security/login_content.html.twig') }}
+
+    </div>
+{% endblock %}

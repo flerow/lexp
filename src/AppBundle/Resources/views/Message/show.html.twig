@@ -1,0 +1,29 @@
+{% extends 'AppBundle::menu.html.twig' %}
+
+{% block content %}
+    <h1>Wiadomość do:
+        {% if message.sender %}
+            {{ message.research.title }}
+        {% else %}
+            {{ message.user.username }}
+        {% endif %}
+    </h1>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ message.id }}</td>
+        </tr>
+        <tr>
+            <th>Treść</th>
+            <td>{{ message.content }}</td>
+        </tr>
+        <tr>
+            <th>Czas</th>
+            <td>{% if message.time %}{{ message.time|date('Y-m-d H:i:s') }}{% endif %}</td>
+        </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

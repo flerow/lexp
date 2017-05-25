@@ -1,0 +1,99 @@
+{% extends 'AppBundle::menu.html.twig' %}
+
+{% block content %}
+    <h3>Moje badania</h3>
+
+
+    {% for research in researches %}
+        <table class="table p-3">
+            <tr class="bg-primary">
+                <th>Title</th>
+                <th>Place</th>
+                <th>Description</th>
+                <th>Payed</th>
+                <th>Tags</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>
+                    {{ research.title }}
+                </td>
+                <td>
+                    {% if research.localization %}
+                        {{ research.localization }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if research.description %}
+                        {{ research.description }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if research.payed %}
+                        Tak
+                    {% else %}
+                        Nie
+                    {% endif %}</td>
+                <td>
+                    {% for tag in research.tags %}
+                        <code>{{ tag.name }}</code>
+                    {% else %}
+                        nie mam tagów
+                    {% endfor %}
+                </td>
+                <td>
+                    <a href="{{ path('research_edit', {'id': research.id}) }}">Edytuj</a>
+                </td>
+            </tr>
+
+            {% for message in research.messages %}
+                {% if not message.sender %}
+                    {% if message.access==3 or message.access==2 %}
+                        <tr>
+                            <td><strong>Wysłana</strong> do
+                                Użytkownika {{ message.user.username }}</td>
+                            <td colspan="4">
+                                Treść: {{ message.content }}</td>
+                            <td>
+                                <form action="{{ path('app_manager_hidemessage', {'id': message.id}) }}" method="post"
+                                      class="pull-right">
+                                    <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"
+                                                                                       aria-hidden="true"></span>
+                                    </button>
+                                </form>
+                                <br></td>
+                        </tr>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            {% for message in research.messages %}
+                {% if message.sender %}
+                    {% if message.access==3 or message.access==2 %}
+                        <tr>
+                            <td><strong>Odebrana</strong> od
+                                Użytkownika: {{ message.user.username }}</td>
+                            <td colspan="4">
+                                Treść: {{ message.content }}</td>
+                            <td>
+                                <a href="{{ path('app_message_newresmes',{'user_id': message.user.id ,'research_id': research.id}) }}">Odpisz</a>
+                                <form action="{{ path('app_manager_hidemessage', {'id': message.id}) }}" method="post"
+                                      class="pull-right">
+                                    <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"
+                                                                                       aria-hidden="true"></span>
+                                    </button>
+                                </form>
+                                <br></td>
+                        </tr>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+        </table>
+        <br>
+        <br>
+    {% endfor %}
+
+
+{% endblock %}
+

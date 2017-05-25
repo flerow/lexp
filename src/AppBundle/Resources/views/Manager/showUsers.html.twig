@@ -1,0 +1,42 @@
+{% extends 'AppBundle::menu.html.twig' %}
+{% block content %}
+    <h3>Baza osób badanych</h3>
+    <table class="table">
+
+        <tr class="bg-primary">
+            <th>Name</th>
+            <th>Place</th>
+            <th>Description</th>
+            <th>Tags</th>
+            <th>Action</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>
+                    {{ user.username }}
+                </td>
+                <td>
+                    {% if user.localization %}
+                        {{ user.localization }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if user.description %}
+                        {{ user.description }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% for tag in user.tags %}
+                        <code>{{ tag.name }}</code>
+                    {% else %}
+                        Brak tagów
+                    {% endfor %}
+                </td>
+                <td>
+                    <a href="{{ path('app_message_newusresmes', {'id': user.id}) }}">Kontakt</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'AppBundle::menu.html.twig' %}
+{% block content %}
+    <div class="pull-right"><a href="{{ path('fos_user_security_logout') }}">Wyloguj</a></div>
+    <h3>Podstawowe:</h3>
+    {% form_theme formUser 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(formUser) }}
+    {{ form_widget(formUser) }}
+    <input class="btn btn-info" type="submit" value="Zapisz"/>
+    {{ form_end(formUser) }}
+
+    {% for flash_message in app.session.flashBag.get('notice') %}
+        <div class="flash-notice alert alert-success">
+            <p> {{ flash_message }}</p>
+        </div>
+    {% endfor %}
+
+    <h3>Tagi:</h3>
+    {% for tag in user.tags %}
+        {{ tag.name }}
+    {% else %}
+        Brak tagów
+    {% endfor %}
+    {% form_theme formTag 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(formTag) }}
+    {{ form_widget(formTag) }}
+    <input class="btn btn-info" type="submit" value="Dodaj"/>
+    {{ form_end(formTag) }}
+
+    {% if not is_granted('ROLE_RESEARCHER') %}
+
+        <form class="pull-right" method="post" action="{{ path('app_profile_lethim') }}">
+            *Będzie konieczne powtórne zalogowanie<br>
+            <input class="btn btn-success btn-lg" type="submit" value="Chcę zostać badaczem!"/>
+        </form>
+
+    {% endif %}
+{% endblock %}

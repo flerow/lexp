@@ -1,0 +1,71 @@
+{% extends 'AppBundle::menu.html.twig' %}
+
+{% block content %}
+    <h3>Moje wiadomości</h3>
+    <h4>Wysłane</h4>
+    {% if messages is not empty %}
+        <table class="table">
+            <thead>
+            <tr class="bg-primary">
+                <th>Id</th>
+                <th>Z</th>
+                <th>Treść</th>
+                <th>Czas</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for message in messages %}
+                <tr>
+                    <td><a href="{{ path('message_show', { 'id': message.id }) }}">{{ message.id }}</a></td>
+                    <td>{{ message.research.title }}</td>
+                    <td>{{ message.content }}</td>
+                    <td>{% if message.time %}{{ message.time|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td><form action="{{ path('app_message_hideuser', {'id': message.id}) }}" method="post" class="pull-right">
+                            <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                        </form></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    {% else %}
+        <p>Nie wysłałeś żadnych wiadomości</p>
+    {% endif %}
+
+
+    <h4>Odebrane</h4>
+    {% if gotmessages is not empty %}
+        <table class="table">
+            <thead>
+            <tr class="bg-primary">
+                <th>Id</th>
+                <th>Z</th>
+                <th>Content</th>
+                <th>Time</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for message in gotmessages %}
+                <tr>
+                    <td><a href="{{ path('message_show', { 'id': message.id }) }}">{{ message.id }}</a></td>
+                    <td>{{ message.research.title }}</td>
+                    <td>{{ message.content }}</td>
+                    <td>{% if message.time %}{{ message.time|date('Y-m-d H:i:s') }}{% endif %}</td>
+                    <td><a href="{{ path('message_new', {'id': message.research.id}) }}">Odpisz</a>
+                        <form action="{{ path('app_message_hideuser', {'id': message.id}) }}" method="post"
+                              class="pull-right">
+                            <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"
+                                                                               aria-hidden="true"></span></button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    {% else %}
+        <p>Nie dostałeś żadnych wiadomości</p>
+    {% endif %}
+{% endblock %}

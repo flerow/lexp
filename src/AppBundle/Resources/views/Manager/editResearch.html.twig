@@ -1,0 +1,30 @@
+{% extends 'AppBundle::menu.html.twig' %}
+
+{% block content %}
+    <form action="{{ path('app_manager_removeresearch', {'id': research.id}) }}" method="post" class="pull-right">
+        <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+    </form>
+    <h1>Edytuj</h1>
+
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" class="btn btn-info" value="Gotowe"/>
+    {{ form_end(form) }}
+
+
+
+    <h3>Tagi:</h3>
+    {% for tag in research.tags %}
+        {{ tag.name }} {#w to miejsce dodaj formularz do usuwania taga z action ustawionym na route z kontrolerem ktory robi redirect na ta strone#}
+    {% else %}
+        nie mam tagów
+    {% endfor %}
+    {% form_theme formTag 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(formTag) }}
+    {{ form_widget(formTag) }}
+    <input type="submit" class="btn btn-info" value="Dodaj"/>
+    {{ form_end(formTag) }}
+
+{% endblock %}
+

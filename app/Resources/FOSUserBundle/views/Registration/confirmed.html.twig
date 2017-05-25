@@ -1,0 +1,12 @@
+{% extends "AppBundle::menu.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block content %}
+    <h3>
+    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+    </h3>
+    {% if targetUrl %}
+    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+    {% endif %}
+{% endblock content %}

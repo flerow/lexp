@@ -1,0 +1,24 @@
+{% extends 'AppBundle::menu.html.twig' %}
+
+{% block content %}
+    {% if logged_user.researches is not empty %}
+        <h3>Nowa wiadomość</h3>
+        <strong>Do użytkownika: </strong>
+        {{ message.user.username }}<br>
+        {% form_theme form 'bootstrap_3_layout.html.twig' %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <label>W sprawie badania:
+            <select name="research">
+                {% for research in logged_user.researches %}
+                    <option value="{{ research.id }}">{{ research.title }}</option>
+                {% endfor %}
+            </select>
+        </label><br>
+        <input class="btn btn-info" type="submit" value="Wyślij"/>
+        {{ form_end(form) }}
+    {% else %}
+        <p>Najpierw utwórz jakieś badanie</p>
+    {% endif %}
+
+{% endblock %}

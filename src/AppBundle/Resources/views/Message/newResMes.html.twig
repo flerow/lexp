@@ -1,0 +1,16 @@
+{% extends 'AppBundle::menu.html.twig' %}
+
+{% block content %}
+    <h3>Nowa wiadomość</h3>
+    <strong>Do użytkownika: </strong>
+    {{ message.user.username }}<br>
+    <strong> W sprawie badania: </strong>
+    {{ message.research.title }}
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class="btn btn-info" type="submit" value="Wyślij" />
+    {{ form_end(form) }}
+
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'AppBundle::menu.html.twig' %}
+{% block content %}
+    <h3>Badania</h3>
+    <table class="table">
+        <tr class="bg-primary">
+            <th>
+                Title
+            </th>
+            <th>
+                Place
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Payed
+            </th>
+            <th>
+                Tags
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        {% for research in researches %}
+            <tr>
+                <td>
+                    {{ research.title }}
+                </td>
+                <td>
+                    {% if research.localization %}
+                        {{ research.localization }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if research.description %}
+                        {{ research.description }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if research.payed %}
+                        Tak
+                    {% else %}
+                        Nie
+                    {% endif %}
+                </td>
+                <td>
+                    {% for tag in research.tags %}
+                        <code>{{ tag.name }}</code>
+                    {% else %}
+                        Brak tagów
+                    {% endfor %}
+                </td>
+                <td>
+                    <a href="{{ path('message_new', {'id': research.id}) }}">Kontakt</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}
