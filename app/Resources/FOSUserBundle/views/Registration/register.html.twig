@@ -1,8 +1,10 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
+    <a class="pull-right btn" href="{{ path('fos_user_security_login') }}">Zaloguj</a>
     <div class="container">
         <h3>Rejestracja</h3>
         {% include "@FOSUser/Registration/register_content.html.twig" %}
+
     </div>
 {% endblock %}

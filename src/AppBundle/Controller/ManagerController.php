@@ -135,6 +135,7 @@ class ManagerController extends Controller
 
     /**
      * @Route("manager/hidemess/{id}")
+     * @Method("POST")
      */
     public function hideMessage(Message $message)
     {

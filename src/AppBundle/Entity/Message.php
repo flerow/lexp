@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,7 +24,7 @@ class Message
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="Wypełnij to pole!")
      * @ORM\Column(name="content", type="text")
      */
     private $content;

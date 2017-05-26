@@ -1,7 +1,7 @@
 <?php
 
 namespace AppBundle\Entity;
-
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -24,7 +24,8 @@ class Tag
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="Wypełnij to pole")
+     * @Assert\Length(max="20", maxMessage="W tym pole może być tylko 20 znaków, wpisuj tagi pojedynczo!")
      * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;

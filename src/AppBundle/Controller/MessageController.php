@@ -171,6 +171,7 @@ class MessageController extends Controller
 
     /**
      * @Route("/delete/{id}")
+     * @Method("POST")
      */
     public function hideUserAction(Message $message)
     {

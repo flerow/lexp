@@ -14,7 +14,6 @@
     {{ form_end(form) }}
 
 
-
     <h3>Tagi:</h3>
     {% for tag in research.tags %}
         {#w to miejsce dodaj formularz do usuwania taga z action ustawionym na route z kontrolerem ktory robi redirect na ta strone#}
@@ -30,9 +29,10 @@
     {% else %}
         Brak tagów
     {% endfor %}
+    <br><br>
     {% form_theme formTag 'bootstrap_3_layout.html.twig' %}
     {{ form_start(formTag) }}
-    {{ form_widget(formTag) }}
+    {{ form_widget(formTag.name) }}
     <input type="submit" class="btn btn-info" value="Dodaj"/>
     {{ form_end(formTag) }}
 

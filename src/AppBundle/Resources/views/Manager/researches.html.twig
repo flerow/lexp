@@ -7,12 +7,12 @@
     {% for research in researches %}
         <table class="table p-3">
             <tr class="bg-primary">
-                <th>Title</th>
-                <th>Place</th>
-                <th>Description</th>
-                <th>Payed</th>
-                <th>Tags</th>
-                <th>Action</th>
+                <th>{{ 'Title'|trans }}</th>
+                <th>{{ 'Place'|trans }}</th>
+                <th>{{ 'Description'|trans }}</th>
+                <th>{{ 'Payed'|trans }}</th>
+                <th>{{ 'Tags'|trans }}</th>
+                <th>{{ 'Action'|trans }}</th>
             </tr>
             <tr>
                 <td>
@@ -38,11 +38,11 @@
                     {% for tag in research.tags %}
                         <code>{{ tag.name }}</code>
                     {% else %}
-                        nie mam tagów
+                        Brak tagów
                     {% endfor %}
                 </td>
                 <td>
-                    <a href="{{ path('research_edit', {'id': research.id}) }}">Edytuj</a>
+                    <a href="{{ path('research_edit', {'id': research.id}) }}"> Edytuj</a>
                 </td>
             </tr>
 
