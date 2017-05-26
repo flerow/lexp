@@ -151,4 +151,18 @@ class ManagerController extends Controller
         return $this->redirectToRoute('app_manager_showresearches');
     }
 
+    /**
+     * @Route("/manager/deltag/{id}/res/{resId}")
+     * @Method("POST")
+     */
+    public function delTagAction(Request $request, Tag $tag, $resId)
+    {
+        $research = $this->getDoctrine()->getRepository('AppBundle:Research')->find($resId);
+        $tag->removeResearch($research);
+        $em = $this->getDoctrine()->getManager();
+        $em->flush();
+
+        return $this->redirectToRoute('research_edit', ['id'=>$resId]);
+    }
+
 }

@@ -15,8 +15,11 @@
     {% endfor %}
 
     <h3>Tagi:</h3>
-    {% for tag in user.tags %}
-        {{ tag.name }}
+    {% for tag in user.tags %}{#w to miejsce dodaj formularz dla taga z action ustawionym na route z kontrolerem ktory robi redirect na ta strone#}
+        <form method="post" action="{{ path("app_profile_deltag", {'id': tag.id}) }}">
+            {{ tag.name }}
+            <button type="submit" class="close pull-left" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </form>
     {% else %}
         Brak tagów
     {% endfor %}

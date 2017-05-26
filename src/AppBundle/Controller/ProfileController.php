@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Tag;
 use AppBundle\Form\TagType;
 use AppBundle\Form\UserType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -78,8 +79,23 @@ class ProfileController extends Controller
     {
         $user = $this->getUser();
         $user->addRole('ROLE_RESEARCHER');
-        $em =  $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getManager();
         $em->flush();
         return $this->redirectToRoute('fos_user_security_login');
+    }
+
+    /**
+     * @Route("/profile/deltag/{id}")
+     * @Method("POST")
+     */
+    public function delTagAction(Request $request, Tag $tag)
+    {
+        $tag->removeUser($this->getUser());
+        //tutaj dodaj kontroler ktory usunie tag - nie usunie go z bazy, a usunie jemu uzytkownika
+        $em = $this->getDoctrine()->getManager();
+        $em->flush();
+
+        return $this->redirectToRoute('app_profile_modify');
+        //zwroci przekierowanie na profile/modify action
     }
 }
