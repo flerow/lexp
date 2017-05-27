@@ -12,4 +12,10 @@ use Doctrine\ORM\EntityRepository;
  */
 class ResearchRepository extends EntityRepository
 {
+    public function findByLocalizationTags($localization, $tags)
+    {
+        $query = "SELECT r FROM AppBundle:Research r JOIN r.tags t WHERE t.name IN (:tags) AND r.localization = :localization";
+        return $this->getEntityManager()
+            ->createQuery($query)->setParameter('localization', $localization)->setParameter('tags', $tags)->getResult();
+    }
 }
