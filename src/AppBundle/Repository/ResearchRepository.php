@@ -18,4 +18,11 @@ class ResearchRepository extends EntityRepository
         return $this->getEntityManager()
             ->createQuery($query)->setParameter('localization', $localization)->setParameter('tags', $tags)->getResult();
     }
+
+    public function findByTags($tags)
+    {
+        $query = "SELECT r FROM AppBundle:Research r JOIN r.tags t WHERE t.name IN (:tags)";
+        return $this->getEntityManager()
+            ->createQuery($query)->setParameter('tags', $tags)->getResult();
+    }
 }

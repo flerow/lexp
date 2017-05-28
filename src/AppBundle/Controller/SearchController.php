@@ -44,6 +44,10 @@ class SearchController extends Controller
             }
             $researches = $this->getDoctrine()->getRepository('AppBundle:Research')->findByLocalizationTags($localization, $tags);
 
+        } else if (!($localization == 'all')) {
+            $researches = $this->getDoctrine()->getRepository('AppBundle:Research')->findBy(['localization' => $localization]);
+        } else if (!($tags == 'all')) {
+            $researches = $this->getDoctrine()->getRepository('AppBundle:Research')->findByTags($tags);
         } else {
             $researches = $this->getDoctrine()->getRepository('AppBundle:Research')->findAll();
         }

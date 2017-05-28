@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12108bc0-751f-4e0d-b3fd-2025abd77ad8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/search.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Search/search.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/SearchController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/SearchController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Repository/ResearchRepository.php" afterPath="$PROJECT_DIR$/src/AppBundle/Repository/ResearchRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/showResearches.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/showResearches.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,29 +26,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SearchController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="392">
+              <caret line="49" column="101" lean-forward="true" selection-start-line="49" selection-start-column="101" selection-end-line="49" selection-end-column="101" />
               <folding>
                 <element signature="e#40#100#0#PHP" expanded="true" />
-                <element signature="e#813#835#0#PHP" expanded="true" />
-                <element signature="e#1344#1364#1#PHP" expanded="true" />
-                <element signature="e#1493#1513#1#PHP" expanded="true" />
+                <element signature="e#1524#1544#1#PHP" expanded="true" />
+                <element signature="e#1692#1712#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResearchRepository.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ResearchRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/ResearchRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="90" lean-forward="false" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
+            <state relative-caret-position="345">
+              <caret line="23" column="90" lean-forward="false" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
               <folding>
-                <marker date="1495918255119" expanded="true" signature="348:410" ph="SELECT r FRO... AppBundle" />
-                <marker date="1495918255119" expanded="true" signature="348:455" ph="SELECT r FRO... AppBundle" />
+                <marker date="1495945000399" expanded="true" signature="348:410" ph="SELECT r FRO... AppBundle" />
+                <marker date="1495945000399" expanded="true" signature="348:455" ph="SELECT r FRO... AppBundle" />
+                <marker date="1495945000399" expanded="true" signature="690:762" ph="SELECT r FRO... AppBundle" />
               </folding>
             </state>
           </provider>
@@ -121,8 +119,8 @@
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Search/search.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/User/showResearches.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/search.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Repository/ResearchRepository.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/SearchController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Repository/ResearchRepository.php" />
       </list>
     </option>
   </component>
@@ -134,10 +132,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1857" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -155,6 +153,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,36 +252,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LookExperi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LookExperi" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AppBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Search" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -433,8 +403,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -559,16 +527,20 @@
       <workItem from="1495866790807" duration="2084000" />
       <workItem from="1495911534311" duration="8000" />
       <workItem from="1495912521242" duration="7705000" />
+      <workItem from="1495926166830" duration="341000" />
+      <workItem from="1495926740755" duration="256000" />
+      <workItem from="1495944001542" duration="999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98031000" />
+    <option name="totallyTimeSpent" value="99627000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23161969" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23991156" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694648" sideWeight="0.5019178" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -848,22 +820,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Search/search.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Search/search.twig" />
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/User/showResearches.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-420">
           <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding>
-            <element signature="e#12#37#0#Twig" expanded="false" />
-            <element signature="e#1625#1636#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -871,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-537">
           <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -883,26 +843,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/ResearchRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="90" lean-forward="false" selection-start-line="16" selection-start-column="90" selection-end-line="16" selection-end-column="90" />
+        <state relative-caret-position="392">
+          <caret line="49" column="101" lean-forward="true" selection-start-line="49" selection-start-column="101" selection-end-line="49" selection-end-column="101" />
           <folding>
-            <marker date="1495918255119" expanded="true" signature="348:410" ph="SELECT r FRO... AppBundle" />
-            <marker date="1495918255119" expanded="true" signature="348:455" ph="SELECT r FRO... AppBundle" />
+            <element signature="e#40#100#0#PHP" expanded="true" />
+            <element signature="e#1524#1544#1#PHP" expanded="true" />
+            <element signature="e#1692#1712#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/SearchController.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/ResearchRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="345">
+          <caret line="23" column="90" lean-forward="false" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
           <folding>
-            <element signature="e#40#100#0#PHP" expanded="true" />
-            <element signature="e#813#835#0#PHP" expanded="true" />
-            <element signature="e#1344#1364#1#PHP" expanded="true" />
-            <element signature="e#1493#1513#1#PHP" expanded="true" />
+            <marker date="1495945000399" expanded="true" signature="348:410" ph="SELECT r FRO... AppBundle" />
+            <marker date="1495945000399" expanded="true" signature="348:455" ph="SELECT r FRO... AppBundle" />
+            <marker date="1495945000399" expanded="true" signature="690:762" ph="SELECT r FRO... AppBundle" />
           </folding>
         </state>
       </provider>
