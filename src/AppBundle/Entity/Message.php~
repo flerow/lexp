@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,7 +24,7 @@ class Message
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank(message="Wypełnij to pole!")
      * @ORM\Column(name="content", type="text")
      */
     private $content;
@@ -58,7 +59,7 @@ class Message
 
     public function __construct()
     {
-        $this->acces=3;
+        $this->access=3;
     }
 
     /**
@@ -184,5 +185,28 @@ class Message
     public function getSender()
     {
         return $this->sender;
+    }
+
+    /**
+     * Set access
+     *
+     * @param integer $access
+     * @return Message
+     */
+    public function setAccess($access)
+    {
+        $this->access = $access;
+
+        return $this;
+    }
+
+    /**
+     * Get access
+     *
+     * @return integer 
+     */
+    public function getAccess()
+    {
+        return $this->access;
     }
 }
