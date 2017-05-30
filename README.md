@@ -3,7 +3,6 @@ LookExperi
 A Symfony project created on May 23, 2017, 11:44 am.
 ##Description
 Webapp for searching within reserches and user, simple managing researches. 
-
 #####As regular User You can:
 - customize your profile with tags, location and descrptiom
 - search within researches by tags and location
@@ -18,6 +17,8 @@ Webapp for searching within reserches and user, simple managing researches.
 - behave like normal user - all Users functions are available for you
 
 ######Temporarly only Polish version available
+
+######Still in development
 ###Autor: Maria Nędzińska
 
 
